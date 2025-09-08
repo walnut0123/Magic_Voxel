@@ -1,0 +1,12 @@
+Git 허브 연동 과정
+
+1. Github 가입 및 로그인
+2. [*프로젝트에 해당하는 리포지터리 생성]
+3. PC 혹은 laptop에 Git / Tortoise Git 설치
+4. [윈도우 11기준] 바탕화면 - 우클릭 - 추가 옵션 표시 - git clone 진행(git에 연동이 되는 폴더를 생성)
+5. [유니티 프로젝트 기준] 기존 프로젝트 안에, git clone을 통해 만든 바로가기 폴더의 git / gitignore 두 개 파일을 옮김
+6. 이후, 폴더 안에서 추가 옵션 표시
+   tortoise - settings - [global 설정] User Info 안의 본인 사용자명 / 이메일을 입력
+  동일하게 진행하여 Get commit - Message 에는 github 속 보이기 위한 메모를 작성 / 하단 Changes made 에는 All 을 선택
+7. 이제 폴더에 가서 항상 commit을 할 때마다, 수정사항이 저장됨
+  
