@@ -9,8 +9,10 @@ public class Voxel : MonoBehaviour
     float currentTime = 0f;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
+        currentTime =0;
+
         Vector3 direction = Random.insideUnitSphere;
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
         rb.velocity = direction * speed;
@@ -21,7 +23,9 @@ public class Voxel : MonoBehaviour
         currentTime += Time.deltaTime;
         if (currentTime > destoryTime)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            VoxelMaker.voxelPool.Add(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
